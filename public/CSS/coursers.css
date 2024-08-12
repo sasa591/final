@@ -1,0 +1,143 @@
+/* Start root */
+:root {
+  --background-color: #f0f2f5;
+  --main-color: #2e3267;
+  --Third-color: #070a37;
+  --new-color: #666;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* End root */
+/* Start Profile Page */
+.Home-content {
+  position: relative;
+  margin: 10px 20px;
+}
+.Home-content::after {
+  content: url("/images/shape.png");
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: -5;
+}
+.Home-content.active::after {
+  opacity: 0.1;
+}
+/* Start Courses */
+.coursers {
+  padding: 30px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+@media (max-width: 530px) {
+  .coursers {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+.coursers .box {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+.coursers .box:hover {
+  transform: translateY(5px);
+}
+.coursers .box .icon i {
+  margin: 30px auto 20px;
+  color: #febc10;
+}
+.coursers .box h3 {
+  font-size: 28px;
+  font-weight: 900;
+  margin: 10px 0;
+  color: var(--main-color);
+}
+.coursers .box p {
+  font-size: 20px;
+  color: gray;
+  text-align: center;
+}
+/* End Courses */
+/* Start Years */
+.years {
+  position: fixed;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+  left: 58%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  transition: transform 0.3s, top 0.4s;
+  visibility: hidden;
+}
+.years i {
+  position: absolute;
+  top: 3%;
+  left: 92%;
+  cursor: pointer;
+  color: var(--Third-color);
+}
+.years ul li {
+  padding: 15px;
+}
+.years ul a {
+  display: block;
+  color: var(--main-color);
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.years ul a:hover {
+  padding-left: 15px;
+  background-color: #ddd;
+  color: #ad7c00;
+}
+.years ul a:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+.open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.3s, top 0.4s;
+  opacity: 1;
+  z-index: 100;
+}
+@media (max-width: 767px) {
+  .years {
+    width: 250px;
+  }
+  .years i {
+    top: 3%;
+    left: 89%;
+  }
+}
+@media (max-width: 676px) {
+  .coursers .box p {
+    font-size: 13px;
+  }
+  .coursers .box h3 {
+    font-size: 25px;
+  }
+}
+/* End Years */

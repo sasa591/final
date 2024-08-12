@@ -1,0 +1,106 @@
+/* Start root */
+:root {
+  --background-color: #f0f2f5;
+  --main-color: #2e3267;
+  --Third-color: #070a37;
+  --new-color: #666;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+/* End root */
+/* Start Profile Page */
+.Home-content {
+  position: relative;
+}
+.Home-content::after {
+  content: url("/images/shape.png");
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: -5;
+}
+.profile {
+  margin: 30px 20px 20px;
+  border-radius: 5px;
+}
+/* Start OverView */
+.overview {
+  min-height: 450px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 767px) {
+  .overview {
+    flex-direction: column;
+  }
+}
+/* End OverView */
+
+/* Start Avatar Box */
+.profile .avatar-box {
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .profile .avatar-box {
+    border-right: 1px solid #eee;
+  }
+}
+.overview .avatar-box img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+  width: 120px;
+  height: 120px;
+}
+.overview .avatar-box h3 {
+  margin: 0px;
+}
+.overview .avatar-box p {
+  color: grey;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* End Avatar Box */
+.profile .info-box .box {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #eee;
+  transition: 0.3s;
+}
+@media (max-width: 647px) {
+  .profile .info-box .box {
+    text-align: center;
+    justify-content: center;
+  }
+}
+.profile .info-box .box:last-child {
+  border: none;
+}
+.profile .info-box .box:hover {
+  background-color: #cfcbcb78;
+}
+.profile .info-box .box h4 {
+  color: rgb(103 103 103);
+  font-weight: bold;
+  font-size: 15px;
+  margin: 0px;
+  width: 100%;
+}
+.profile .info-box .box > div {
+  font-size: 14px;
+  min-width: 250px;
+  padding: 10px 0 0;
+}
+.profile .info-box .box > div .spanOne {
+  color: var(--new-color);
+}
+/* End Profile Page */

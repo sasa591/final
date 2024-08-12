@@ -1,0 +1,122 @@
+/* Start root */
+:root {
+  --background-color: #f0f2f5;
+  --main-color: #2e3267;
+  --Third-color: #070a37;
+  --new-color: #666;
+  --pink-color: #e90172;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+/* End root */
+/* Start Home */
+.Home-content {
+  position: relative;
+}
+.Home-content::before {
+  content: url("/images/profile-shape3.png");
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: -5;
+}
+.Home-content::after {
+  content: url("/images/shape.png");
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: -5;
+}
+@media (max-width: 1200px) {
+  .Home-content::before {
+    content: "";
+  }
+}
+/* Start user-not-found */
+.content {
+  position: relative;
+}
+.user-not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  width: 400px;
+  background-color: white;
+  opacity: 0.9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.user-not-found img {
+  width: 200px;
+  height: 200px;
+}
+.user-not-found .user-text {
+  margin-top: 15px;
+}
+.user-not-found .user-text p {
+  text-align: center;
+}
+.user-not-found .user-text p:first-child {
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--new-color);
+}
+.user-not-found .user-text p:nth-child(2) {
+  color: var(--new-color);
+  font-size: 20px;
+  margin-top: 5px;
+}
+/* End user-not-found */
+/* Start posts */
+.Posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-top: 30px;
+}
+.post {
+  padding: 15px;
+  margin: 0 10px 10px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 767px) {
+  .post {
+    padding: 10px;
+  }
+}
+.post .top {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+  padding: 20px;
+}
+.post .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.post .text {
+  padding: 10px;
+}
+@media (max-width: 620px) {
+  .post .top {
+    flex-direction: column;
+  }
+  .post .text {
+    margin: 0;
+  }
+}
+/* End posts */
+/* End Home */

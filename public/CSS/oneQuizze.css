@@ -1,0 +1,98 @@
+/* Start root */
+:root {
+    --background-color: #f0f2f5;
+    --main-color: #2e3267;
+    --Third-color: #070a37;
+    --new-color: #666;
+    --pink-color: #e90172;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  /* Start Main Heading */
+  .main-heading {
+    text-align: center;
+  }
+  .main-heading h2 {
+    font-weight: normal;
+    font-size: 30px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  /* End Main Heading */
+  /* End root */
+  /* Start Profile Page */
+  .Home-content {
+    position: relative;
+    margin: 30px 20px 20px;
+  }
+  .Home-content::after {
+    content: url("/images/shape.png");
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: -5;
+  }
+.oneQuizze{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.questions{
+    width : 100%;
+}
+.questions form{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+    gap: 20px;
+}
+.question p{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.answer{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-left: -25px;
+    padding-top: 10px;
+    gap: 10px;
+}
+.answer input ~ label{
+    font-size: 16px;
+    color: var(--new-color);
+}
+.footbtn{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width:100%
+}
+.questions form button,button{
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.res{
+    margin-top: 10px;
+}

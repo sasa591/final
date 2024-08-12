@@ -1,0 +1,111 @@
+/* Start root */
+:root {
+  --background-color: #f0f2f5;
+  --main-color: #2e3267;
+  --Third-color: #070a37;
+  --new-color: #666;
+  --pink-color: #e90172;
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* Start Main Heading */
+.main-heading {
+  text-align: center;
+}
+.main-heading h2 {
+  font-weight: normal;
+  font-size: 30px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+/* End Main Heading */
+/* End root */
+/* Start Profile Page */
+.Home-content {
+  position: relative;
+  margin: 30px 20px 20px;
+}
+.Home-content::after {
+  content: url("/images/shape.png");
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: -5;
+}
+.lectures {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+@media (max-width: 767px) {
+  .lectures {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+.lectures .one-lectures {
+  padding: 30px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.lectures .one-lectures:hover {
+  transform: translateY(5px);
+}
+.lectures .one-lectures i {
+  color: #b9b9b9;
+  padding: 10px;
+}
+.lectures .one-lectures .info {
+  border-bottom: 1px solid #b9b9b9;
+  padding: 20px 20px 40px;
+  width: 100%;
+  text-align: center;
+}
+.lectures .one-lectures .info h2 {
+  color: var(--new-color);
+}
+.lectures .one-lectures a {
+  padding: 8px 10px;
+  border-radius: 6px;
+  background-color: var(--main-color);
+  color: white;
+  position: absolute;
+  top: 196px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+}
+.lectures .one-lectures a:hover {
+  background-color: var(--Third-color);
+}
+@media (max-width: 614px) {
+  .lectures .one-lectures a {
+    top: 224px;
+  }
+}
+@media (max-width: 533px) {
+  .lectures .one-lectures a {
+    top: 196px;
+  }
+}
+@media (max-width: 347px) {
+  .lectures .one-lectures a {
+    top: 224px;
+  }
+}

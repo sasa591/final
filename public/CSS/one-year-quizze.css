@@ -1,0 +1,244 @@
+/* Start root */
+:root {
+  --background-color: #f0f2f5;
+  --main-color: #2e3267;
+  --Third-color: #070a37;
+  --new-color: #666;
+  --pink-color: #e90172;
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* Start Main Heading */
+.main-heading {
+  text-align: center;
+}
+.main-heading h2 {
+  font-weight: normal;
+  font-size: 30px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+/* End Main Heading */
+/* End root */
+/* Start Profile Page */
+.Home-content {
+  position: relative;
+  margin: 30px 20px 20px;
+}
+.Home-content::after {
+  content: url("/images/shape.png");
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: -5;
+}
+.Home-content.active::after {
+  opacity: 0.1;
+}
+.quizzes {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .quizzes {
+    flex-direction: column;
+    align-items: normal;
+  }
+}
+.quizzes .upload {
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  min-width: 250px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.quizzes .upload h2 {
+  text-transform: uppercase;
+  font-size: 24px;
+  color: var(--main-color);
+}
+.quizzes .upload .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.quizzes .upload .btn span {
+  background-color: var(--main-color);
+  color: white;
+  padding: 0 15px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.quizzes .upload .btn span:hover {
+  background-color: var(--Third-color);
+}
+.quizzes .files {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+}
+.quizzes .files .one-file {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 25px 25px 20px;
+  border-radius: 5px;
+}
+.files .one-file .head-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+.files .one-file .head-q h2 {
+  color: var(--new-color);
+}
+.files .one-file .head-q i {
+  color: #febc10;
+  padding: 10px;
+  font-size: 30px;
+}
+
+.quizzes .files .one-file p {
+  color: gray;
+  font-size: 13px;
+}
+.quizzes .files .one-file .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  font-size: 13px;
+  color: grey;
+}
+.quizzes .files .one-file .info span {
+  font-size: 16px;
+}
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding-top: 10px;
+}
+.foot a {
+  background-color: #2e3267;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.foot > i {
+  color: var(--new-color);
+  cursor: pointer;
+  font-size: 18px;
+}
+.foot > i:hover {
+  color: black;
+}
+/* Start Popup Section */
+/* ---------------------------------------- */
+.conatiner {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+  position: fixed;
+  left: 58%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  transition: transform 0.3s, top 0.4s;
+  visibility: hidden;
+}
+/* Start popup(container) media  */
+@media (max-width: 500px) {
+  .conatiner {
+    left: 57%;
+  }
+}
+/* End popup(container) media  */
+
+/* Start class for Java Script openPopup */
+.open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.3s, top 0.4s;
+}
+/* End class for Java Script openPopup */
+.conatiner form .login-title {
+  color: #333;
+  text-align: center;
+  color: var(--Third-color);
+  margin-bottom: 20px;
+}
+.conatiner form .login-title h2 {
+  font-size: 25px;
+  line-height: 1.5;
+}
+.page-box .input-box input {
+  border: 2px solid var(--new-color);
+  padding: 10px 15px;
+  outline: none;
+  border-radius: 6px;
+  font-size: 16px;
+  color: var(--main-color);
+  margin: 8px 0;
+  background: transparent;
+  transition: 0.3s ease;
+}
+.page-box .input-box input:focus {
+  border-color: var(--main-color);
+}
+.page-box .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-box .btn input {
+  margin: 10px 5px;
+}
+.page-box .btn .form-btn {
+  width: 60px;
+  height: 30px;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+  font-weight: 400;
+}
+.page-box .btn .form-btn:first-child {
+  background-color: #b12525;
+  border: 2px solid #b12525;
+  text-align: center;
+}
+.page-box .btn .form-btn:last-child {
+  background-color: #0c770c;
+  border: 2px solid #0c770c;
+}
+/* End Popup Section */

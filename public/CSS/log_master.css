@@ -1,0 +1,361 @@
+/* Start Global Rules */
+:root {
+  --main-color: #2e3267;
+  --secondary-color: #070a37;
+  --Third-color: #2c4766;
+  --VI-color: #2e3267;
+  --new-color: #666;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+.container {
+  position: relative;
+  width: 500px;
+  height: 527px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 0 45px;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+/* End Global Rules */
+.log {
+  padding: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  padding: 40px;
+  position: relative;
+}
+.log:before {
+  content: url("/Images/abs-removebg-preview.png");
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+.container .login-box {
+  position: relative;
+  width: 100%;
+}
+.page-box .login-title {
+  text-align: center;
+  color: var(--new-color);
+  margin-bottom: 40px;
+}
+.page-box .login-title h2 {
+  color: var(--main-color);
+}
+.login-title h2 {
+  font-size: 32px;
+  line-height: 1.5;
+}
+.login-title p {
+  font-size: 16px;
+  font-weight: 500;
+}
+.page .input-box,
+.input-box-2 {
+  width: 100%;
+  height: 55px;
+  position: relative;
+}
+.input-box input,
+.input-box-2 input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid gray;
+  outline: none;
+  border-radius: 6px;
+  font-size: 16px;
+  color: var(--new-color);
+  padding: 0 16px;
+  transition: 0.3s ease;
+}
+.input-box input:focus,
+.input-box input:valid,
+.input-box-2 input:focus,
+.input-box-2 input:valid {
+  border-color: var(--main-color);
+}
+.input-box label,
+.input-box-2 label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: var(--new-color);
+  pointer-events: none;
+  transition: 0.3s ease-in-out;
+}
+.input-box input:focus ~ label,
+.input-box input:valid ~ label,
+.input-box-2 input:focus ~ label,
+.input-box-2 input:valid ~ label {
+  top: 1px;
+  left: 12px;
+  font-size: 13px;
+  color: var(--main-color);
+  background: white;
+  padding: 0 6px;
+}
+.input-box-2 {
+  margin-top: 12px;
+  position: relative;
+}
+.forgot.show {
+  margin: 14px 0 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.forgot.show label {
+  font-size: 14.5px;
+  color: var(--new-color);
+  cursor: pointer;
+}
+.forgot.show label input {
+  accent-color: var(--main-color);
+  cursor: pointer;
+  margin-right: 4px;
+}
+.forgot a {
+  font-size: 14.5px;
+  color: var(--new-color);
+  text-decoration: none;
+}
+.forgot a:hover {
+  text-decoration: underline;
+  color: var(--main-color);
+}
+.btn-box {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-box a {
+  font-size: 14.5px;
+  color: var(--new-color);
+  text-decoration: none;
+}
+.btn-box a:hover {
+  text-decoration: underline;
+  color: var(--main-color);
+}
+.btn-box button {
+  width: 90px;
+  height: 40px;
+  background: var(--main-color);
+  border: 2px solid var(--main-color);
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+}
+.btn-box button:hover {
+  background-color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  transition: 0.2s ease-in-out;
+}
+.text-box {
+  max-width: 600px;
+  position: absolute;
+  right: 0;
+  padding: 100px;
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+.text-box h2 {
+  color: var(--VI-color);
+  font-size: 100px;
+  font-weight: 900;
+  line-height: 1.5;
+}
+.text-box p {
+  color: black;
+  font-size: 20px;
+  line-height: 1.5;
+}
+@media (max-width: 460px) {
+  .input-box label,
+  .input-box-2 label {
+    font-size: 15px;
+  }
+  .btn-box button {
+    width: 100%;
+  }
+  .btn-box {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    margin-top: -25px;
+  }
+  .btn-box a {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  .forgot.show {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .forgot.show label,
+  .forgot.show a {
+    flex-grow: 1;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .log {
+    justify-content: center;
+  }
+  .text-box {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .log {
+    justify-content: center;
+  }
+  .text-box {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .log {
+    justify-content: space-between;
+  }
+  .text-box {
+    display: initial;
+    max-width: 500px;
+  }
+}
+@media (min-width: 1115px) {
+  .text-box {
+    display: initial;
+    max-width: 600px;
+  }
+}
+@media (min-width: 1116px) {
+  .text-box {
+    display: initial;
+    max-width: 650px;
+  }
+}
+/* Start Popup */
+.popup {
+  width: 400px;
+  background: #eee;
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  padding: 30px;
+  color: var(--main-color);
+  visibility: hidden;
+  transition: transform 0.3s, top 0.4s;
+  z-index: 3;
+  box-shadow: 8px 3px 20px 0px #000;
+}
+.popup h2 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 30px 0 10;
+  color: var(--new-color);
+}
+.popup a {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  margin-top: 30px;
+  padding: 10px;
+  background: var(--main-color);
+  color: white;
+  border: 0;
+  outline: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0 0 0 /0.2);
+}
+.popup a:hover {
+  background-color: var(--secondary-color);
+  transition: 0.2s ease-in-out;
+}
+.open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+.close-button {
+  width: 20px;
+  height: 20px;
+  outline: none;
+  border: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--main-color);
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .popup {
+    width: 300px;
+    height: 260px;
+  }
+}
+@media (max-width: 450px) {
+  .popup {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px;
+  }
+}
+/* End Popup */
+@media (max-width: 370px) {
+  .container {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .login-title {
+    display: none;
+  }
+}
+h5{
+    margin-top: 5px;
+}

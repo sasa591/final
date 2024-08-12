@@ -1,0 +1,104 @@
+/* Start global rules */
+/* Start root */
+:root {
+  --background-color: #f0f2f5;
+  --main-color: #2e3267;
+  --Third-color: #070a37;
+  --new-color: #666;
+  --pink-color: #e90172;
+}
+/* End root */
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+/* Start Main Heading */
+.main-heading {
+  text-align: center;
+}
+.main-heading h2 {
+  font-weight: normal;
+  font-size: 30px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+/* End Main Heading */
+.objections {
+  position: relative;
+  margin: 30px 20px 20px;
+}
+.objections::before {
+  content: url("/images/profile-shape3.png");
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: -5;
+}
+.objections::after {
+  content: url("/images/shape.png");
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: -5;
+}
+@media (max-width: 1200px) {
+  .objections::before {
+    content: "";
+  }
+}
+/* End global rules */
+/* Start Objections Table */
+.objections .responsive-table {
+  overflow-x: auto;
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.table-one {
+  margin-bottom: 20px;
+}
+.objections .responsive-table table {
+  font-size: 15px;
+  width: 100%;
+  min-width: 1000px;
+  border-spacing: 0;
+}
+.responsive-table table td {
+  padding: 20px;
+  text-align: center;
+}
+.responsive-table table thead td {
+  background-color: #eee;
+  font-weight: bold;
+  font-size: 18px;
+}
+.responsive-table table tbody tr td {
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #eee;
+  transition: 0.3s;
+}
+.responsive-table table tbody tr td:last-child span {
+  border-radius: 4px;
+  background-color: var(--main-color);
+  color: white;
+  cursor: pointer;
+  padding: 2px 15px;
+  border-radius: 4px;
+}
+
+.responsive-table table tbody tr:hover td {
+  background-color: #cfd1f0;
+}
+
+/* End Objections Table */

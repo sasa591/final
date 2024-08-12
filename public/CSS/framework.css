@@ -1,0 +1,62 @@
+/* Start Box */
+.d-flex {
+  display: flex;
+}
+.align-center {
+  align-items: center;
+}
+/* End Box */
+
+/* Start padding + Margin */
+.p-10 {
+  padding: 10px;
+}
+.p-20 {
+  padding: 20px;
+}
+.m-20 {
+  margin: 20px;
+}
+.m-5 {
+  margin: 5px;
+}
+.mt-0 {
+  margin-top: 0;
+}
+/* End padding + Margin */
+
+/* Start Color */
+.bg-primary {
+  background-color: #1f293a;
+}
+.bg-white {
+  background-color: white;
+}
+.c-black {
+  color: black;
+}
+.c-white {
+  color: white;
+}
+/* End Color */
+
+/* Start Position */
+.p-relative {
+  position: relative;
+}
+/* End Position */
+
+/* Start Font */
+.txt-c {
+  text-align: center;
+}
+.fs-14 {
+  font-size: 14px;
+}
+/* End Font */
+
+/* Start Border */
+.rad-6 {
+  border-radius: 6px;
+}
+/* End Border */

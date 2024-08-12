@@ -1,0 +1,274 @@
+/* Start root */
+:root {
+  --background-color: #f0f2f5;
+  --main-color: #2e3267;
+  --Third-color: #070a37;
+  --new-color: #666;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+/* End root */
+/* Start Profile Page */
+.Home-content {
+  position: relative;
+}
+.Home-content::after {
+  content: url("/images/shape.png");
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: -5;
+}
+.profile {
+  margin: 30px 20px 20px;
+  border-radius: 5px;
+}
+/* Start OverView */
+.overview {
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 767px) {
+  .overview {
+    flex-direction: column;
+  }
+}
+/* End OverView */
+
+/* Start Avatar Box */
+.profile .avatar-box {
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .profile .avatar-box {
+    border-right: 1px solid #eee;
+  }
+}
+.overview .avatar-box img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+  width: 120px;
+  height: 120px;
+}
+.overview .avatar-box h3 {
+  margin: 0px;
+}
+.overview .avatar-box p {
+  color: grey;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* End Avatar Box */
+.profile .info-box .box {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #eee;
+  transition: 0.3s;
+}
+@media (max-width: 647px) {
+  .profile .info-box .box {
+    text-align: center;
+    justify-content: center;
+  }
+}
+.profile .info-box .box:last-child {
+  border: none;
+}
+.profile .info-box .box:hover {
+  background-color: #cfcbcb78;
+}
+.profile .info-box .box h4 {
+  color: rgb(103 103 103);
+  font-weight: bold;
+  font-size: 15px;
+  margin: 0px;
+  width: 100%;
+}
+.profile .info-box .box > div {
+  font-size: 14px;
+  min-width: 250px;
+  padding: 10px 0 0;
+}
+@media (max-width: 647px) {
+  .profile .info-box .box > div {
+    padding-right: 10px;
+  }
+}
+.profile .info-box .box > div .spanOne {
+  color: var(--new-color);
+}
+/* Start Update Section */
+.btn-update {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+.avatar-box .btn-edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.btn-update button,
+.avatar-box .btn-edit button {
+  border: none;
+  width: fit-content;
+}
+.avatar-box .btn-edit button {
+  background-color: white;
+}
+.btn-update button i,
+.avatar-box .btn-edit button i {
+  color: var(--new-color);
+  cursor: pointer;
+  margin: 5px;
+}
+.btn-update button:hover i,
+.avatar-box .btn-edit button:hover i {
+  color: black;
+}
+/* End Update Section */
+.conatiner {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #eee;
+  text-align: center;
+  width: 300px;
+  box-shadow: 8px 3px 20px 8px var(--new-color);
+  z-index: 3;
+  position: fixed;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%) scale(0.1);
+  transition: transform 0.3s, top 0.4s;
+  visibility: hidden;
+}
+/* Start popup(container) media  */
+@media (max-width: 500px) {
+  .conatiner {
+    left: 57%;
+  }
+}
+/* End popup(container) media  */
+
+/* Start class for Java Script openPopup */
+.open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.3s, top 0.4s;
+}
+/* End class for Java Script openPopup */
+.conatiner form .login-title {
+  color: #333;
+  text-align: center;
+  color: var(--Third-color);
+  margin-bottom: 20px;
+}
+.conatiner form .login-title h2 {
+  font-size: 25px;
+  line-height: 1.5;
+}
+.page-box .input-box {
+  width: 100%;
+  height: 55px;
+  position: relative;
+}
+.page-box .input-box input {
+  border: 2px solid var(--new-color);
+  padding: 10px 15px;
+  outline: none;
+  border-radius: 6px;
+  font-size: 16px;
+  color: var(--main-color);
+  margin: 8px 0;
+  background: transparent;
+  transition: 0.3s ease;
+}
+.page-box .input-box input:focus {
+  border-color: var(--main-color);
+}
+.page-box .input-box label {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  padding: 0 6px;
+  transform: translateY(-50%);
+  font-size: 13px;
+  background: #eee;
+  color: var(--main-color);
+  pointer-events: none;
+}
+.page-box .btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.page-box .btn input {
+  margin: 10px 5px;
+}
+.page-box .btn .form-btn {
+  width: 60px;
+  height: 30px;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+  font-weight: 400;
+  text-align: center;
+}
+.page-box .btn .form-btn:first-child {
+  background-color: #b12525;
+  border: 2px solid #b12525;
+}
+.page-box .btn .form-btn:last-child {
+  background-color: #0c770c;
+  border: 2px solid #0c770c;
+}
+.dateinput {
+  width: 89%;
+}
+input[type="file"] {
+  display: none;
+}
+input[type="file"] ~ label {
+  color: var(--new-color);
+  margin: 5px;
+}
+input[type="file"] ~ label:hover {
+  cursor: pointer;
+  color: black;
+}
+/* Start Popup Section */
+/* End Popup Section */
+/* End Profile Page */
+.chp{
+    position: absolute;
+    left: 50%;
+    top: 150%;
+    transform: translate(-50%, -50%);
+    border: none;
+    background: #eee;
+    padding: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 14px;
+    display: none;
+}
+.chp:hover{
+    background-color: var(--Third-color);
+    color: white;
+}

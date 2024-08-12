@@ -1,0 +1,139 @@
+/* Start root */
+:root {
+    --background-color: #f0f2f5;
+    --main-color: #2e3267;
+    --Third-color: #070a37;
+    --new-color: #666;
+    --pink-color: #e90172;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  /* Start Main Heading */
+  .main-heading {
+    text-align: center;
+  }
+  .main-heading h2 {
+    font-weight: normal;
+    font-size: 30px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  /* End Main Heading */
+  /* End root */
+  /* Start Profile Page */
+  .Home-content {
+    position: relative;
+    margin: 30px 20px 20px;
+  }
+  .Home-content::after {
+    content: url("/images/shape.png");
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: -5;
+  }
+.btnn {
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.optionButton{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.radioDiv{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+    color: var(--new-color);
+    font-weight: bold;
+}
+
+button:hover {
+    background: var(--Third-color);
+}
+
+.answer{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.question {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+.remove-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 30px;
+    cursor: pointer;
+    float: right;
+    text-transform: uppercase;
+    border: none;
+    margin: 10px 0;
+}
+.remove-btn:hover {
+    background-color: #ff0000;
+}
+
+form {
+    flex-basis: 70%;
+}
+form .main-input {
+    padding: 15px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: #f9f9f9;
+    resize: none;
+    font-weight: bold;
+  }
+form .main-input:focus {
+    outline: none;
+  }
+form select.main-input {
+    height: 50px;
+    color: black;
+    background-color: #f9f9f9;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin-top: 5px;
+    appearance: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.footInput{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}

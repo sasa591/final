@@ -1,0 +1,123 @@
+/* Start global rules */
+
+/* Start root */
+:root {
+  --background-color: #f0f2f5;
+  --main-color: #2e3267;
+  --Third-color: #070a37;
+  --new-color: #666;
+  --pink-color: #e90172;
+}
+/* End root */
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+/* Start Main Heading */
+.main-heading {
+  text-align: center;
+  grid-area: heading;
+}
+.main-heading h2 {
+  font-weight: normal;
+  font-size: 30px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+/* End Main Heading */
+/* End global rules */
+/* Start Home-content */
+.Home-contnet {
+  position: relative;
+  margin: 30px 20px 20px;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-areas: "inbox inbox inbox inbox inbox inbox inbox inbox";
+  grid-gap: 20px;
+}
+.Home-contnet::before {
+  content: url("/images/profile-shape3.png");
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: -5;
+}
+@media (max-width: 1200px) {
+  .Home-contnet::before {
+    content: "";
+  }
+}
+@media (max-width: 992px) {
+  .Home-contnet {
+    grid-template-areas:
+      "filter filter filter filter filter filter filter filter "
+      "inbox inbox inbox inbox inbox inbox inbox inbox";
+  }
+}
+/* End Home-content */
+
+/* Start Inbox */
+ul {
+  grid-area: inbox;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.activity {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+}
+.activity .logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 35px;
+}
+.activity .logo {
+  color: var(--Third-color);
+}
+.activity .logo .logo-text {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.activity .logo .logo-text h2 {
+  color: var(--main-color);
+  border-right: 1px solid var(--main-color);
+  padding-right: 15px;
+}
+.activity .logo .logo-text h4 {
+  flex-grow: 2;
+  color: black;
+  font-size: 15px;
+}
+.activity .logo .logo-text span {
+  color: var(--new-color);
+}
+@media (max-width: 600px) {
+  .activity .logo .logo-text h2 {
+    font-size: 16px;
+  }
+  .activity .logo .logo-text h4 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 500px) {
+  .activity .logo-text {
+    flex-direction: column;
+  }
+}
+/* End Inbox */

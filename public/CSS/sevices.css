@@ -1,0 +1,106 @@
+/* Start root */
+:root {
+  --background-color: #f0f2f5;
+  --main-color: #2e3267;
+  --Third-color: #070a37;
+  --new-color: #666;
+  --pink-color: #e90172;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+/* End root */
+/* Start Home */
+.services {
+  position: relative;
+  margin: 30px 20px 20px;
+}
+.services::before {
+  content: url("/images/profile-shape3.png");
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: -5;
+}
+.services::after {
+  content: url("/images/shape.png");
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: -5;
+}
+@media (max-width: 1200px) {
+  .Home-content::before {
+    content: "";
+  }
+}
+.services .servics-content {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+/* Small */
+@media (max-width: 400px) {
+  .services .servics-content {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+.services .servics-content .one-service {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.services .servics-content .one-service:hover img {
+  transform: rotate(5deg);
+}
+.services .servics-content .one-service .icon {
+  text-align: center;
+}
+.services .servics-content .one-service .icon img {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 64px;
+  height: 64px;
+  transition: 0.3s;
+}
+.services .servics-content .one-service .services-name {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: black;
+  font-weight: 900;
+}
+.services .servics-content .one-service .info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-top: 1px solid #eee;
+}
+.services .servics-content .one-service .info span:first-child {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: grey;
+  padding: 5px;
+}
+.services .servics-content .one-service .info span:nth-child(2) {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  background-color: var(--main-color);
+  width: fit-content;
+}
